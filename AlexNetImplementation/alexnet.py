@@ -1,7 +1,11 @@
 # Tensorflow v2.3.1
 
 """
-Programmed by the-robot <https://github.com/the-robot>
+
+AlexNet from Scratch Implementation
+author: Pierre Berjon
+
+
 """
 
 from tensorflow.keras.layers import (
