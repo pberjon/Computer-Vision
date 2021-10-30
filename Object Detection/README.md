@@ -1,1 +1,1 @@
-Here is a folder where we have done a live object detection with the YOLOv3 model. I didn't add the weights files of YOLO because of GitHub limitations. Though, they can be found at https://pjreddie.com/media/files/yolov3.weights and at https://pjreddie.com/media/files/yolov3-tiny.weights.
+Here is a folder where I have done a live object detection with the YOLOv3 model. I didn't add the weights files of YOLO because of GitHub limitations. Though, they can be found at https://pjreddie.com/media/files/yolov3.weights and at https://pjreddie.com/media/files/yolov3-tiny.weights.
