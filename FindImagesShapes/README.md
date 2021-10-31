@@ -10,9 +10,9 @@ Original Image
 
 Identified Shapes
 
-<img src="https://github.com/pberjon/Computer-Vision/tree/main/FindImagesShapes/images/Example%20-%20findShapes.png" width="500" height="300" />
+<img src="https://github.com/pberjon/Computer-Vision/tree/main/FindImagesShapes/Example - findShapes.png" width="500" height="300" />
 
 
 Sorted on area
 
-<img src="https://github.com/pberjon/Computer-Vision/tree/main/FindImagesShapes/images/Example%20-%20sortOnArea.png" width="500" height="300" />
+<img src="https://github.com/pberjon/Computer-Vision/tree/main/FindImagesShapes/Example - sortOnArea.png" width="500" height="300" />
