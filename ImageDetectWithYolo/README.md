@@ -1,12 +1,8 @@
-# Module 4 Image Classification
+# YOLO Detection in Images
 ----------------
-## Implementation of a YOLO v3 Object Detector
+## Implementation of a YOLO Object Detector
 
-### Hussein Sajid & Taeho Jeon
-
-[Jupyter Notebook](https://github.com/hussein073/Mod_4_Image_Classification/blob/master/Image_Detect_Yolov3.ipynb)
-
-[Slides](https://docs.google.com/presentation/d/14-GSsqBWwYikHM0EngZw_1xe--rDP0knILt_I6ecBhA/edit?usp=sharing)
+### Pierre Berjon
 
 **Project Goal**
 
