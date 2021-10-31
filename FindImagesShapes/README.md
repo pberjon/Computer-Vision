@@ -10,9 +10,9 @@ Original Image
 
 Identified Shapes
 
-![picture](https://github.com/pberjon/Computer-Vision/tree/main/FindImagesShapes/Example - findShapes.png)
+![picture](https://github.com/pberjon/Computer-Vision/tree/main/FindImagesShapes/findShapes.png)
 
 
 Sorted on area
 
-![picture](https://github.com/pberjon/Computer-Vision/tree/main/FindImagesShapes/Example - sortOnArea.png)
+![picture](https://github.com/pberjon/Computer-Vision/tree/main/FindImagesShapes/sortOnArea.png)
