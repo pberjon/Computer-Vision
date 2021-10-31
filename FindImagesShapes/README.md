@@ -5,14 +5,14 @@
 
 Original Image
 
-![alt text]("https://github.com/pberjon/Computer-Vision/tree/main/FindImagesShapes/images/someshapes.jpg" width="500" height="300")
+![alt text](https://github.com/pberjon/Computer-Vision/tree/main/FindImagesShapes/images/someshapes.jpg)
 
 
 Identified Shapes
 
-![alt text]("https://github.com/pberjon/Computer-Vision/tree/main/FindImagesShapes/Example - findShapes.png" width="500" height="300")
+![alt text](https://github.com/pberjon/Computer-Vision/tree/main/FindImagesShapes/Example - findShapes.png)
 
 
 Sorted on area
 
-![alt text]("https://github.com/pberjon/Computer-Vision/tree/main/FindImagesShapes/Example - sortOnArea.png" width="500" height="300")
+![alt text](https://github.com/pberjon/Computer-Vision/tree/main/FindImagesShapes/Example - sortOnArea.png)
