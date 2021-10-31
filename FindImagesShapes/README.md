@@ -5,7 +5,7 @@
 
 Original Image
 
-![alt text](https://github.com/pberjon/Computer-Vision/tree/main/FindImagesShapes/images/someshapes.jpg)
+![picture](https://github.com/pberjon/Computer-Vision/tree/main/FindImagesShapes/images/someshapes.jpg)
 
 
 Identified Shapes
