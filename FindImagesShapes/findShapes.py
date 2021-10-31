@@ -1,9 +1,7 @@
 import numpy as np
 import cv2
 
-DIR = "D:\\ComputerVision-Projects-master\\FindShapes\\"
-
-original_image = cv2.imread(DIR + 'images\\someshapes.jpg')
+original_image = cv2.imread('images\\someshapes.jpg')
 print("Shape: Original Image", original_image.shape)
 
 # Converting to grayscale
