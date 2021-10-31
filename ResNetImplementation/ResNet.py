@@ -7,6 +7,9 @@ author: Pierre Berjon
 
 """
 
+import sys
+sys.path.append("D:\Miniconda3\Lib\site-packages")
+
 import torch
 import torch.nn as nn
 
