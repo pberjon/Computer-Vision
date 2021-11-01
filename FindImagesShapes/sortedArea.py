@@ -1,9 +1,7 @@
 import cv2
 import numpy as np
 
-DIR = "D:\\ComputerVision-Projects-master\\FindShapes\\"
-
-original_image = cv2.imread(DIR + "images\\someshapes.jpg")
+original_image = cv2.imread("images\\someshapes.jpg")
 
 gray = cv2.cvtColor(original_image, cv2.COLOR_BGR2GRAY)
 
