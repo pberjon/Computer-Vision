@@ -1,5 +1,5 @@
 r"""
-Script of a convertor for DOTA dataset to COCO dataset.
+Script of a convertor for DOTA dataset to YOLO dataset.
 
 Examples:
 If the DOTA dataset has the following structure:
