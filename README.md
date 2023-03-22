@@ -20,3 +20,5 @@ Projects from School (or affiliated):
 
 My most recent work is on a convertor for object detection datasets:
    * DOTAtoCOCO convertor: it converts a dataset with DOTA format annotations to a dataset with COCO format annotations.
+
+You can also find other ML/DL projects I've worked on in my GitHub profile, outside this repo.
