@@ -33,16 +33,18 @@ python dota_to_coco.py --dota-path=your\dota\dataset\path --coco-path=\your\new\
 The COCO dataset will have the following structure:
 | COCODataset
     | train
-        | 001.png
-        | 002.png
-        | ...
-        | 999.png
+        | images
+            | 001.png
+            | 002.png
+            | ...
+            | 999.png
         | annotation.json
     | val
-        | 001.png
-        | 002.png
-        | ...
-        | 999.png
+        | images
+            | 001.png
+            | 002.png
+            | ...
+            | 999.png
         | annotation.json
 """
 
