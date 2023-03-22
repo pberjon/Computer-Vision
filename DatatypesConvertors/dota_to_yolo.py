@@ -9,21 +9,21 @@ If the DOTA dataset has the following structure:
             | 001.png
             | 002.png
             | ...
-            | 999.png
+            | 800.png
         | labelTxt
             | 001.txt
             | 002.txt
             | ...
-            | 999.txt
+            | 800.txt
     | val
         | images
-            | 001.png
-            | 002.png
+            | 801.png
+            | 802.png
             | ...
             | 999.png
         | labelTxt
-            | 001.txt
-            | 002.txt
+            | 801.txt
+            | 802.txt
             | ...
             | 999.txt
 
@@ -37,21 +37,21 @@ The YOLO dataset will have the following structure, the only thing that changes 
             | 001.png
             | 002.png
             | ...
-            | 999.png
+            | 800.png
         | labels
             | 001.txt
             | 002.txt
             | ...
-            | 999.txt
+            | 800.txt
     | val
         | images
-            | 001.png
-            | 002.png
+            | 801.png
+            | 802.png
             | ...
             | 999.png
         | labels
-            | 001.txt
-            | 002.txt
+            | 801.txt
+            | 802.txt
             | ...
             | 999.txt
 """
