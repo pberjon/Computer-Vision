@@ -11,16 +11,16 @@ If the DOTA dataset has the following structure:
             | ...
             | 800.png
         | labelTxt
-            | 801.txt
-            | 802.txt
+            | 001.txt
+            | 002.txt
             | ...
-            | 999.txt
+            | 800.txt
     | val
         | images
-            | 001.png
-            | 002.png
+            | 801.png
+            | 802.png
             | ...
-            | 800.png
+            | 999.png
         | labelTxt
             | 801.txt
             | 802.txt
