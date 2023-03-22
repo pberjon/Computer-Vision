@@ -27,23 +27,33 @@ If the DOTA dataset has the following structure:
             | ...
             | 999.txt
 
-You need to type that command to get your COCO dataset:
-python dota_to_coco.py --dota-path=your\dota\dataset\path --coco-path=\your\new\coco\dataset\path
+You need to type that command to get your YOLO dataset:
+python dota_to_yolo.py --dota-path=your\dota\dataset\path --yolo-path=\your\new\yolo\dataset\path
 
-The COCO dataset will have the following structure:
-| COCODataset
+The YOLO dataset will have the following structure, the only thing that changes is the way we annotate data:
+| YOLODataset
     | train
-        | 001.png
-        | 002.png
-        | ...
-        | 999.png
-        | annotation.json
+        | images
+            | 001.png
+            | 002.png
+            | ...
+            | 999.png
+        | labels
+            | 001.txt
+            | 002.txt
+            | ...
+            | 999.txt
     | val
-        | 001.png
-        | 002.png
-        | ...
-        | 999.png
-        | annotation.json
+        | images
+            | 001.png
+            | 002.png
+            | ...
+            | 999.png
+        | labels
+            | 001.txt
+            | 002.txt
+            | ...
+            | 999.txt
 """
 
 
