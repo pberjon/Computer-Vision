@@ -13,3 +13,10 @@ Results on MNIST dataset:
    * Slow: ~ 4 hours/1 epoch
    * Fast: ~ 6 min/1 epoch
    * Pytorch: ~ 1 min/1 epoch.
+
+Projects from School (or affiliated):
+   * LU Decomposition (Décomposition LU in French)
+   * MNIST
+
+My most recent work is on a convertor for object detection datasets:
+   * DOTAtoCOCO convertor: it converts a dataset with DOTA format annotations to a dataset with COCO format annotations.
