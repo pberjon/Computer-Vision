@@ -37,12 +37,12 @@ The COCO dataset will have the following structure:
             | 001.png
             | 002.png
             | ...
-            | 999.png
+            | 800.png
         | annotation.json
     | val
         | images
-            | 001.png
-            | 002.png
+            | 801.png
+            | 802.png
             | ...
             | 999.png
         | annotation.json
