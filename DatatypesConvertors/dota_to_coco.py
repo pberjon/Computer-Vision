@@ -52,17 +52,17 @@ import json
 import os
 import shutil
 import datetime
-from shapely import Polygon
+import shapely
 
 e = datetime.datetime.now()
 
-CLASSES = ['dog']
+CLASSES = ['wind_turbine']
 IMG_HEIGHT = 512
 IMG_WIDTH = 512
 
 year = "2023"
 version = "1.0"
-description = "COCO annotation file for a Dog Dataset"
+description = "COCO annotation file for Wind Turbines Dataset"
 contributor = "Pierre Berjon"
 url = "github.com"
 date_created = "%s-%s-%sT%s:%s:%s" % (e.year, e.month, e.day, e.hour, e.minute, e.second)
@@ -88,7 +88,7 @@ class DOTAtoCOCO():
             Path to the dataset with DOTA format annotations.
         path_to_COCO (`str`):
             Path to the new dataset with COCO format annotations.
-        labels (`list`):
+        labels (`tuple`):
             List of labels registered in annotations.
         height (`int`):
             Height of the images in DOTA format dataset.
@@ -144,7 +144,7 @@ class DOTAtoCOCO():
             image = {
                 "id": idx,
                 "license": 1,
-                "file_name": imageFile,
+                "file_name": os.path.join('images', imageFile),
                 "height": self.imagesHeight,
                 "width": self.imagesWidth,
                 "date_captured": None
@@ -154,6 +154,7 @@ class DOTAtoCOCO():
         return images
 
     def get_annotations(self):
+        print('Annotations processing...')
         annotations = []
         labelsFiles = os.listdir(os.path.join(self.DOTApath, 'labelTxt'))
         images = self.get_images()
@@ -162,16 +163,19 @@ class DOTAtoCOCO():
         for idx in range(len(labelsFiles)):
             labelFile = labelsFiles[idx]
             labelName, labelExtension = os.path.splitext(labelFile)
-            imageID = get_imageID(images, labelName + '.png')
+            imageID = get_imageID(images, os.path.join('images', labelName + '.png'))
             with open(os.path.join(self.DOTApath, 'labelTxt', labelFile)) as f:
                 lines = f.readlines()
             for i in range(len(lines)):
                 line = lines[i]
                 line = line.split(' ')
                 coords = line[:-3]
-                bbox = [float(coords[0]), float(coords[1]), float(coords[4]), float(coords[5])]
-                poly = Polygon([[coords[i], coords[i+1]] for i in [0,2,4,6]])
-                area = poly.area
+                bbox = [[float(coords[i]), float(coords[i+1])] for i in [0, 2, 4, 6]]
+                [x, y] = list(zip(*bbox))
+                minx, miny, maxx, maxy = min(x), min(y), max(x), max(y)
+                bbox = shapely.geometry.box(minx, miny, maxx, maxy)
+                area = bbox.area
+                bbox = [(minx + maxx)/2, (miny + maxy)/2, maxx - minx, maxy - miny]
                 category = line[-3]
                 label = {
                     "id": record_id,
@@ -187,10 +191,11 @@ class DOTAtoCOCO():
         return annotations
 
     def copy_images(self):
+        print('Copying all the images into images folder...\n')
         for imageFile in os.listdir(os.path.join(self.DOTApath, 'images')):
             shutil.copy(
                 os.path.join(self.DOTApath, 'images', imageFile),
-                os.path.join(self.COCOpath, imageFile)
+                os.path.join(self.COCOpath, 'images', imageFile)
             )
 
     def process(self):
@@ -201,7 +206,7 @@ class DOTAtoCOCO():
         coco_data = CocoAnnotation(info, categories, images, annotations)
 
         coco_data.save_annotation(os.path.join(self.COCOpath, 'annotation.json'))
-        # self.copy_images()
+        self.copy_images()
 
 class CocoAnnotation():
     def __init__(
@@ -227,6 +232,7 @@ class CocoAnnotation():
         return ann
     
     def save_annotation(self, destination_path):
+        print('Saving the annotation file...')
         ann = self.get_annotation()
         with open(destination_path, "w") as fp:
             json.dump(ann, fp)
@@ -243,8 +249,8 @@ def parse_args():
 
 args = parse_args()
 
-# os.makedirs(os.path.join(args.coco_path, 'train'), exist_ok=True)
-# os.makedirs(os.path.join(args.coco_path, 'val'), exist_ok=True)
+os.makedirs(os.path.join(args.coco_path, 'train', 'images'), exist_ok=True)
+os.makedirs(os.path.join(args.coco_path, 'val', 'images'), exist_ok=True)
 print('Converting train dataset...')
 TrainConvertor = DOTAtoCOCO(os.path.join(args.dota_path, 'train'), os.path.join(args.coco_path, 'train'), CLASSES, IMG_HEIGHT, IMG_WIDTH)
 TrainConvertor.process()
