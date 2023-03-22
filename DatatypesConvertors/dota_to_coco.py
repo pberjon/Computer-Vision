@@ -39,7 +39,6 @@ class DOTAtoCOCO():
         width
     ):
         
-        
         self.COCOpath = path_to_COCO
         self.DOTApath = path_to_DOTA
 
