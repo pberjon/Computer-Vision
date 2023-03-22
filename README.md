@@ -9,7 +9,7 @@ I have a bunch of Neural Networks I have implemented based of their respective p
    * ResNet
 
 I also implemented a simple CNN from Scratch (basically from Numpy):
-   Results on MNIST dataset:
-      * Slow: ~ 4 hours/1 epoch
-      * Fast: ~ 6 min/1 epoch
-      * Pytorch: ~ 1 min/1 epoch.
+Results on MNIST dataset:
+   * Slow: ~ 4 hours/1 epoch
+   * Fast: ~ 6 min/1 epoch
+   * Pytorch: ~ 1 min/1 epoch.
