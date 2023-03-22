@@ -1,3 +1,53 @@
+r"""
+Script of a convertor for DOTA dataset to COCO dataset.
+
+Examples:
+If the DOTA dataset has the following structure:
+| DOTADataset
+    | train
+        | images
+            | 001.png
+            | 002.png
+            | ...
+            | 999.png
+        | labelTxt
+            | 001.txt
+            | 002.txt
+            | ...
+            | 999.txt
+    | val
+        | images
+            | 001.png
+            | 002.png
+            | ...
+            | 999.png
+        | labelTxt
+            | 001.txt
+            | 002.txt
+            | ...
+            | 999.txt
+
+You need to type that command to get your COCO dataset:
+python dota_to_coco.py --dota-path=your\dota\dataset\path --coco-path=\your\new\coco\dataset\path
+
+The COCO dataset will have the following structure:
+| COCODataset
+    | train
+        | 001.png
+        | 002.png
+        | ...
+        | 999.png
+        | annotation.json
+    | val
+        | 001.png
+        | 002.png
+        | ...
+        | 999.png
+        | annotation.json
+"""
+
+
+
 import json
 import os
 import shutil
@@ -6,13 +56,13 @@ from shapely import Polygon
 
 e = datetime.datetime.now()
 
-CLASSES = ['wind_turbine']
+CLASSES = ['dog']
 IMG_HEIGHT = 512
 IMG_WIDTH = 512
 
 year = "2023"
 version = "1.0"
-description = "COCO annotation file for Wind Turbines Dataset"
+description = "COCO annotation file for a Dog Dataset"
 contributor = "Pierre Berjon"
 url = "github.com"
 date_created = "%s-%s-%sT%s:%s:%s" % (e.year, e.month, e.day, e.hour, e.minute, e.second)
