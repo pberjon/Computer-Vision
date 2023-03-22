@@ -6,13 +6,13 @@ from shapely import Polygon
 
 e = datetime.datetime.now()
 
-CLASSES = ['dog']
+CLASSES = ['wind_turbine']
 IMG_HEIGHT = 512
 IMG_WIDTH = 512
 
 year = "2023"
 version = "1.0"
-description = "COCO annotation file for dataset"
+description = "COCO annotation file for Wind Turbines Dataset"
 contributor = "Pierre Berjon"
 url = "github.com"
 date_created = "%s-%s-%sT%s:%s:%s" % (e.year, e.month, e.day, e.hour, e.minute, e.second)
@@ -30,6 +30,23 @@ def get_imageID(imagesList, filename):
     return None
 
 class DOTAtoCOCO():
+    """
+    Construct a data convertor that can create a dataset for object detection with COCO format annotations based 
+    on a dataset with DOTA format annotations.
+    Args:
+        path_to_DOTA (`str`):
+            Path to the dataset with DOTA format annotations.
+        path_to_COCO (`str`):
+            Path to the new dataset with COCO format annotations.
+        labels (`list`):
+            List of labels registered in annotations.
+        height (`int`):
+            Height of the images in DOTA format dataset.
+        width (`int`):
+            Width of the images in DOTA format dataset.
+    """
+
+
     def __init__(
         self, 
         path_to_DOTA, 
@@ -38,7 +55,7 @@ class DOTAtoCOCO():
         height, 
         width
     ):
-        
+
         self.COCOpath = path_to_COCO
         self.DOTApath = path_to_DOTA
 
@@ -144,7 +161,7 @@ class CocoAnnotation():
         images, 
         annotations
     ):
-        
+
         self.info = info
         self.categories = categories
         self.images = images
