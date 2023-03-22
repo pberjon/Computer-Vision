@@ -6,13 +6,13 @@ from shapely import Polygon
 
 e = datetime.datetime.now()
 
-CLASSES = ['wind_turbine']
+CLASSES = ['dog']
 IMG_HEIGHT = 512
 IMG_WIDTH = 512
 
 year = "2023"
 version = "1.0"
-description = "COCO annotation file for Wind Turbines Dataset"
+description = "COCO annotation file for dataset"
 contributor = "Pierre Berjon"
 url = "github.com"
 date_created = "%s-%s-%sT%s:%s:%s" % (e.year, e.month, e.day, e.hour, e.minute, e.second)
