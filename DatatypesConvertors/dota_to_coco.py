@@ -30,7 +30,16 @@ def get_imageID(imagesList, filename):
     return None
 
 class DOTAtoCOCO():
-    def __init__(self, path_to_DOTA, path_to_COCO, labels, height, width):
+    def __init__(
+        self, 
+        path_to_DOTA, 
+        path_to_COCO, 
+        labels, 
+        height, 
+        width
+    ):
+        
+        
         self.COCOpath = path_to_COCO
         self.DOTApath = path_to_DOTA
 
@@ -129,7 +138,14 @@ class DOTAtoCOCO():
         # self.copy_images()
 
 class CocoAnnotation():
-    def __init__(self, info, categories, images, annotations):
+    def __init__(
+        self, 
+        info, 
+        categories, 
+        images, 
+        annotations
+    ):
+        
         self.info = info
         self.categories = categories
         self.images = images
