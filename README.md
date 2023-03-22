@@ -19,4 +19,4 @@ Projects from School (or affiliated):
    * MNIST
 
 My most recent work is on a convertor for object detection datasets:
-   * DOTAtoCOCO convertor: it converts a dataset with DOTA format annotations to a dataset with COCO format annotations.
+   ** DOTAtoCOCO convertor: it converts a dataset with DOTA format annotations to a dataset with COCO format annotations.
