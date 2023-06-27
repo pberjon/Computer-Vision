@@ -38,14 +38,3 @@ To play with the `demo-notebooks/` files, you need to make sure jupyter notebook
 ```bash
 python -m ipykernel install --user--name=myenv
 ```
-- Run the notebook file **only from `demo_notebooks/`** and then select **Kernel > Switch Kernel > myenv**. You are now ready to go !
-
-<!---
-Variables with links.
--->
-[slow-implementation]: https://github.com/3outeille/CNNumpy/tree/master/src/slow
-[fast-implementation]: https://github.com/3outeille/CNNumpy/tree/master/src/fast
-[slow-blog]: https://hackmd.io/@machine-learning/blog-post-cnnumpy-slow
-[fast-blog]: https://hackmd.io/@machine-learning/blog-post-cnnumpy-fast
-[demo-notebook]: https://github.com/3outeille/CNNumpy/blob/master/src/demo_notebooks/demo-cnnumpy-fast.ipynb
-[virtualenv]: https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/
